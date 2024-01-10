@@ -75,6 +75,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'midlands_soccer_lessons.wsgi.application'
 
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
 # Code comment out as default sqllite is no longer needed.
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

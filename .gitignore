@@ -1,9 +1,13 @@
+# make sure env.py file is in gitignore file so sensitive information is not pushed to Github.
+
 core.Microsoft*
 core.mongo*
 core.python*
-env.py
+env.py  
 __pycache__/
 *.py[cod]
 node_modules/
 .github/
 cloudinary_python.txt
+
+# make sure env.py file is in gitignore file so sensitive information is not pushed to Github.

@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+if os.path.isfile('env.py'):
+    import env.py
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,6 +29,7 @@ SECRET_KEY = 'django-insecure-84^zdzxw764up2^t&4g8*#l(13!-c6kvl49*=lo5(xg&yjb!4%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# Add to allow access to local server and heroku.
 ALLOWED_HOSTS = ['8000-nathanbytec-midlandssoc-h61bqac13no.ws-eu107.gitpod.io','.herokuapp.com']
 
 
@@ -69,16 +74,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'midlands_soccer_lessons.wsgi.application'
 
-
+# Code comment out as default sqllite is no longer needed.
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+# }       
 
 
 # Password validation

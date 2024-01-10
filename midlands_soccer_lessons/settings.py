@@ -94,6 +94,11 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.8000-nathanbytec-midlandssoc-h61bqac13no.ws-eu107.gitpod.io",
+    "https://*.herokuapp.com"
+]
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',

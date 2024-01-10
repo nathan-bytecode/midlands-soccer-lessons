@@ -7,3 +7,6 @@ class Account(models.Model):
     email = models.EmailField(max_length=200, unique=True)
     phone = models.IntegerField(unique=True)
     photo = models.ImageField(unique=True)
+    author = models.ForeignKey(
+    User, on_delete=models.CASCADE, related_name="account"
+)

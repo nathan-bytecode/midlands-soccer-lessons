@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Account
 
 # Create your views here.
-
-# add function to test response.
-def soccer(request):
-    return HttpResponse("This is a test!")
+def create_account(request):
+    return render(request, 'soccer/account.html')

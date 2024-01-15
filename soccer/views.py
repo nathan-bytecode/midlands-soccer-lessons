@@ -3,5 +3,9 @@ from django.views import generic
 from .models import Account
 
 # Create your views here.
-def create_account(request):
+
+def index(request):
+    return render(request, 'soccer/index.html')
+
+def account(request):
     return render(request, 'soccer/account.html')

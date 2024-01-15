@@ -1,6 +1,8 @@
 from . import views
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
-    path('', views.Account, name='account'),
+    path('', views.index, name='home'),
+    path('account/', views.account, name='account'),
+
 ]

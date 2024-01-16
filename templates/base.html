@@ -72,15 +72,12 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>       
 
-    <main class="flex-shrink-0 main-bg">
+    {% block content %}
+        <!-- Index.html Content -->
+    {% endblock content %}
 
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-
-    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">

@@ -41,7 +41,8 @@ body, html {
   background-size: cover;
   position:sticky;
 
-  margin-bottom: 25px;
+  box-sizing: border-box;
+  padding-top: 250px;
 }
 
 /* Place text in the middle of the image */
@@ -54,14 +55,16 @@ body, html {
   color: white;
 }
 
-/* Venues section */
+/* Venues and Courses section */
 
-.venue {
+.card-title {
     text-align: center;
+    box-sizing: border-box;
+    padding-top: 40px;
     padding-bottom: 10px;
 }
 
-.venue-container {
+.card-container {
     padding-bottom: 10px;
     padding-right: 25px;
     padding-left: 25px;

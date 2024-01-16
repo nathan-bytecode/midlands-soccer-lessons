@@ -21,6 +21,8 @@ body {
     background-color: #F9FAFC;
 }
 
+/* ----- Index.html page -----*/
+
 body, html {
     height: 100%;
 }
@@ -38,6 +40,8 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   position:sticky;
+
+  margin-bottom: 25px;
 }
 
 /* Place text in the middle of the image */
@@ -48,4 +52,17 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+/* Venues section */
+
+.venue {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.venue-container {
+    padding-bottom: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
 }

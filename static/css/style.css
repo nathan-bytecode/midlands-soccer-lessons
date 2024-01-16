@@ -21,6 +21,16 @@ body {
     background-color: #F9FAFC;
 }
 
+/* End Section */
+
+.end {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 /* ----- Index.html page -----*/
 
 body, html {

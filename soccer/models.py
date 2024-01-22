@@ -10,4 +10,5 @@ class Account(models.Model):
     photo = models.ImageField(unique=True)
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="account"
+    
 )

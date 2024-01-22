@@ -63,23 +63,39 @@
 
                 </ul>
                 <ul class="navbar-nav">
-                    
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" aria-label="sign up" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
+                        href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-label="login"  href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" 
+                        href="{% url 'account_login' %}">Login</a>
                     </li>
+                    {% endif %}
                     
                 </ul>
             </div>
         </div>
-    </nav>       
+    </nav>
+    
+    <main class="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">You are logged in as {{ user.username }}</p>
+        {% else %}
+        <p class="text-end m-3">You are not logged in</p>
+        {% endif %}
+    </main>
 
     {% block content %}
         <!-- Index.html Content -->
     {% endblock content %}
-
+    
   <!--End Section-->
 <div class="end">
     

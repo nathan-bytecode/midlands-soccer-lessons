@@ -7,5 +7,5 @@ from .models import Account
 def index(request):
     return render(request, 'soccer/index.html')
 
-def register(request):
-    return render(request, 'soccer/account.html')
+def account(request):
+    return render(request, 'soccer/templates/account/signup.html')

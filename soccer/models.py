@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
+
+STATUS = ((0, "Not Live"), (1, "Live"))
+BOOKING_STATUS = ((0, "Awaiting Confirmation"), (1, "Confirm Booking"),
+                  (2, "Booking Declined"))
+
 class Account(models.Model):
     name = models.CharField(max_length=200, unique=True)
     email = models.EmailField(max_length=200, unique=True)
@@ -38,3 +43,25 @@ class Course3(models.Model):
 
     def __str__(self):
         return self.title
+
+# Booking model for when selecting a course
+class Booking(models.Model):
+    course = [
+        ('course1', "COURSE1"),
+        ('course2', "COURSE2"),
+        ('course2', "COURSE2"),
+    ]
+    course_selection = models.CharField(max_length=10, choices=course, default='user')
+    email = models.EmailField()
+    contact_phone = models.CharField(max_length=15, null=False, blank=False)
+    booking_date = models.DateField(null=False, blank=False)
+    booking_time = models.CharField(null=False, blank=False, max_length=5)
+    number_of_attendees = models.IntegerField(default=2, blank=False)
+    booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
+    account = models.ForeignKey('Account', null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        if self.account:
+            return f"Booking for {self.account}"
+        else:
+            return f"Booking (Account or User not specified)"

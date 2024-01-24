@@ -18,4 +18,7 @@ def profile(request):
 
 def courses(request):
     return render(request, 'soccer/courses.html')
+
+def bookings(request):
+    return render(request, 'soccer/bookings.html')
  

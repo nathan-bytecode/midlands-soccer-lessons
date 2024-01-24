@@ -78,4 +78,6 @@ body, html {
     padding-bottom: 10px;
     padding-right: 25px;
     padding-left: 25px;
+    display: flex;
+
 }

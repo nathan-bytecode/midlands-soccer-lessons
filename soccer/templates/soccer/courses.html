@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% url 'courses' as courses_url %}
+
+{% block content %}
+
+<!--Card Group-->
+<div class="card-container">
+    <div class="row row-cols-1 row-cols-md-2 g-5">
+        <div class="col">
+          <div class="card h-100">
+            <img src="/static/images/younger-boys-course.jpg" class="card-img-top"
+              alt="Team photo of young boys huddled together in a circle.">
+            <div class="card-body">
+              <h5 class="card-title">Boys aged: 7+</h5>
+              <p class="card-text">
+                This training course is suitable for boys aged 7 - 14.</p>
+              <br>
+              <a href="#">Click here to book today.</a>
+            </div>
+          </div>
+        </div>
+        <div><h1>Course 1</h1><p>This course is suitable for boys aged 7-14. The course covers a total of 6 weeks, including 2 sessions per week. You will find our prices are very reasonable starting at € 60 per kid. Book your course below with the option of choosing dates that suit and a preferred venue. </p></div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/static/images/older-boys-course.jpg" class="card-img-top"
+              alt="Team photo of boys receiving an instruction from a coach.">
+            <div class="card-body">
+              <h5 class="card-title">Boys aged 14+</h5>
+              <p class="card-text">This training course is suitable for boys aged 14 - 21.</p>
+              <br>
+              <a href="#">Click here to book today.</a>
+            </div>
+          </div>
+        </div>
+        <div><h1>Course 2</h1><p>This course is suitable for boys aged 14+. The course covers a total of 6 weeks, including 3 sessions per week. You will find our prices are very reasonable starting at € 80 per lad. Book your course below with the option of choosing dates that suit and a preferred venue. </p></div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/static/images/girl-course.jpg" class="card-img-top"
+              alt="Team photo of a coach giving a friendly hand clap gesture to the girls.">
+            <div class="card-body">
+              <h5 class="card-title">Girls aged 9+</h5>
+              <p class="card-text">
+                This training course is suitable for girls aged 9 - 14.</p>
+                <br>
+                <a href="#">Click here to book today.</a>
+            </div>
+          </div>
+        </div>
+        <div><h1>Course 3</h1><p>This course is suitable for girls aged 9+. The course covers a total of 6 weeks, including 2 sessions per week. You will find our prices are very reasonable starting at € 40 per kid. Book your course below with the option of choosing dates that suit and a preferred venue. </p></div>
+      </div>
+    </div> 
+
+
+{% endblock %}

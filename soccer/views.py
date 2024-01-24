@@ -15,4 +15,7 @@ def profile(request):
     renders profile page
     """
     return render(request, "soccer/profile.html")
+
+def courses(request):
+    return render(request, 'soccer/courses.html')
  

@@ -9,3 +9,10 @@ def index(request):
 
 def account(request):
     return render(request, 'soccer/templates/account/signup.html')
+
+def profile(request):
+    """
+    renders profile page
+    """
+    return render(request, "soccer/profile.html")
+ 

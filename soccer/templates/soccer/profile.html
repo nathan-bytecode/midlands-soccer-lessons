@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% url 'profile' as profile_url %}
+
+{% block content %}
+
+<h1>Welcome to your profile page.</h1>
+
+<div class="card-container">
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card h-100">
+            <img src= "#">
+            <div class="card-body">
+              <h5 class="card-title">{{ user.username }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container">
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card h-100">
+            <img src= "#">
+            <div class="card-body">
+              <p class="card-text">Name: {{ user.username }}</p>>
+              <p class="card-text">Email: {{ user.email }}</p>>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

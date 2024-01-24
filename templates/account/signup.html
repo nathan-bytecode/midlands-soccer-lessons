@@ -18,8 +18,20 @@
     <p>Please fill in this form to create an account.</p>
     <hr>
 
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter user name" name="username" id="username" required>
+
+    <label for="fname"><b>First name</b></label>
+    <input type="text" placeholder="Enter first name" name="fname" id="fname" required>
+
+    <label for="lname"><b>Last name</b></label>
+    <input type="text" placeholder="Enter last name" name="lname" id="lname" required>
+
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="phone"><b>Phone</b></label>
+    <input type="tel" placeholder="Enter phone number" name="phone" id="phone" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
@@ -30,10 +42,5 @@
     {% endif %}
     <button type="submit" class="registerbtn">Register</button>
   </div>
-
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
-</form>
 
 {% endblock content %}

@@ -9,13 +9,17 @@ BOOKING_STATUS = ((0, "Awaiting Confirmation"), (1, "Confirm Booking"),
                   (2, "Booking Declined"))
 
 class Account(models.Model):
-    name = models.CharField(max_length=200, unique=True)
+    first_name = models.CharField(max_length=200, unique=True, default='SOME STRING')
+    last_name = models.CharField(max_length=200, unique=True, default='SOME STRING')
     email = models.EmailField(max_length=200, unique=True)
     phone = models.IntegerField(unique=True)
     photo = models.ImageField(unique=True)
-    author = models.ForeignKey(
-    User, on_delete=models.CASCADE, related_name="account"
-)
+
+    def __str__(self):
+        if self.user:
+            return f"{self.first_name + ' ' + self.last_name}"
+        else:
+            return f"New Account / Not Provided"
 
 # Course 1 model for boys aged 7+
 class Course1(models.Model):
@@ -51,6 +55,7 @@ class Booking(models.Model):
         ('course2', "COURSE2 - Boys Aged 14-21 (80euros per boy)"),
         ('course2', "COURSE2 - Girls Aged 9-14 (40euros per girl)"),
     ]
+    
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     course_selection = models.CharField(max_length=10, choices=course_choice)
@@ -60,10 +65,3 @@ class Booking(models.Model):
     booking_time = models.CharField(null=False, blank=False, max_length=5)
     number_of_attendees = models.IntegerField(default=1, blank=False)
     booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
-    account = models.ForeignKey('Account', null=True, on_delete=models.CASCADE)
-
-    def __str__(self):
-        if self.account:
-            return f"Booking for {self.account}"
-        else:
-            return f"Booking (Account or User not specified)"

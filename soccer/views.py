@@ -23,8 +23,13 @@ def courses(request):
 def bookings(request):
     context = {}
     form = BookingForm()
-    context['form'] = form
-    return render(request, 'soccer/bookings.html', context)
+    if request.method =='POST':
+        if 'submit' in request.POST:
+            form = BookingForm(request.POST)
+            if form.is_valid():
+                form.save()
+        context['form'] = form
+    return render(request, 'soccer/bookings.html', {'form': BookingForm})
 
 # def new_booking(request, slug):
   #  model = Booking

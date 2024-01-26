@@ -8,10 +8,10 @@
 <main class="container">
     <div class="row">
         <div class="col-sm-6">
-            <form>
+            <form method="post" action="{% url 'bookings' %}" enctype="multipart/form-data">
             {{ form|crispy }}
             {% csrf_token %}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                <button name="submit" id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
             </form>
         </div>
     </div>

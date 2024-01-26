@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-84^zdzxw764up2^t&4g8*#l(13!-c6kvl49*=lo5(xg&yjb!4%
 DEBUG = True
 
 # Add to allow access to local server and heroku.
-ALLOWED_HOSTS = ['8000-nathanbytec-midlandssoc-h61bqac13no.ws-eu107.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = [ '8000-nathanbytec-midlandssoc-zjji9p2macp.ws-eu107.gitpod.io','.herokuapp.com']
 
 
 # Application definition

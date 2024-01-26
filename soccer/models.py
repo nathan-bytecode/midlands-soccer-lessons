@@ -46,17 +46,19 @@ class Course3(models.Model):
 
 # Booking model for when selecting a course
 class Booking(models.Model):
-    course = [
-        ('course1', "COURSE1"),
-        ('course2', "COURSE2"),
-        ('course2', "COURSE2"),
+    course_choice = [
+        ('course1', "COURSE1 - Boys Aged 7-14 (60euros per boy)"),
+        ('course2', "COURSE2 - Boys Aged 14-21 (80euros per boy)"),
+        ('course2', "COURSE2 - Girls Aged 9-14 (40euros per girl)"),
     ]
-    course_selection = models.CharField(max_length=10, choices=course, default='user')
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    course_selection = models.CharField(max_length=10, choices=course_choice)
     email = models.EmailField()
     contact_phone = models.CharField(max_length=15, null=False, blank=False)
     booking_date = models.DateField(null=False, blank=False)
     booking_time = models.CharField(null=False, blank=False, max_length=5)
-    number_of_attendees = models.IntegerField(default=2, blank=False)
+    number_of_attendees = models.IntegerField(default=1, blank=False)
     booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
     account = models.ForeignKey('Account', null=True, on_delete=models.CASCADE)
 

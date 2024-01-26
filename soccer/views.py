@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Account
+from .models import Account, Booking
+from soccer.forms import BookingForm
 
 # Create your views here.
 
@@ -20,5 +21,14 @@ def courses(request):
     return render(request, 'soccer/courses.html')
 
 def bookings(request):
-    return render(request, 'soccer/bookings.html')
+    context = {}
+    form = BookingForm()
+    context['form'] = form
+    return render(request, 'soccer/bookings.html', context)
+
+# def new_booking(request, slug):
+  #  model = Booking
+   # template_name = 'soccer/bookings.html'
+    #fields = ['first_name', 'last_name']
  
+    #booking_form = BookingForm()

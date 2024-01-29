@@ -10,12 +10,15 @@
 
 <div>
   <p>Email: {{ user.email }}</p>
-  <p>Phone: {{ user.phone }}</p>
+  <p>Phone: {{ booking.phone }}</p>
 </div>
 
 <div class="container">
     <div><h2>Bookings</h2>
       <form method="post" action="{% url 'bookings' %}" enctype="multipart/form-data">
+        <div class="bookings">
+          {% for booking in bookings %}
+          {% if user.id == booking.id %}
         <table class="table">
           <tr class="tr">
             <th class="th">Course</th><br>
@@ -24,18 +27,17 @@
             <th class="th">Status</th>
           </tr>
           <tr class="tr">
-            <td class="td">(Example: Course 1) - need to link bookings</td>
+            <div class="booking">
+              <td class="td">{{ booking.course_selection }}</td>
+            </div>
             <td class="td">(Tullamore)</td>
-            <td class="td">(1)</td>
-            <td class="td">Awaiting Approval</td>
-          </tr>
-          <tr class="tr">
-            <td class="td">...</td>
-            <td class="td">...</td>
-            <td class="td">...</td>
-            <td class="td">Awaiting Approval</td>
+            <td class="td">{{ booking.number_of_attendees }}</td>
+            <td class="td">{{ booking.booking_status }}</td>
           </tr>
         </table>
+        {% endif %}
+        {% endfor %}
+      </div>
     </form>
     </div>
   </div>

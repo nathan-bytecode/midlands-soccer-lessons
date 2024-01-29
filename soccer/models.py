@@ -55,11 +55,7 @@ class Booking(models.Model):
         ('course2', "COURSE2 - Boys Aged 14-21 (80euros per boy)"),
         ('course3', "COURSE3 - Girls Aged 9-14 (40euros per girl)"),
     ]
-    
-    username = models.ForeignKey(
-        User, on_delete=models.CASCADE,
-        related_name="booking"
-    )
+
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     course_selection = models.CharField( choices=course_choice)
@@ -69,3 +65,6 @@ class Booking(models.Model):
     booking_time = models.CharField(null=False, blank=False, max_length=5)
     number_of_attendees = models.IntegerField(default=1, blank=False)
     booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
+
+    def __str__(self):
+        return self.first_name

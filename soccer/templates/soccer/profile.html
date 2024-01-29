@@ -13,11 +13,31 @@
   <p>Phone: {{ user.phone }}</p>
 </div>
 
+<div class="container">
     <div><h2>Bookings</h2>
-      <table>
-        <tr><th>Course</th><th>Venue</th><th></th></tr>
-      </table>
-      <p>{{ user.bookings }}</p>
+      <form method="post" action="{% url 'bookings' %}" enctype="multipart/form-data">
+        <table class="table">
+          <tr class="tr">
+            <th class="th">Course</th><br>
+            <th class="th">Venue</th>
+            <th class="th">Number of Enrollments</th>
+            <th class="th">Status</th>
+          </tr>
+          <tr class="tr">
+            <td class="td">(Example: Course 1) - need to link bookings</td>
+            <td class="td">(Tullamore)</td>
+            <td class="td">(1)</td>
+            <td class="td">Awaiting Approval</td>
+          </tr>
+          <tr class="tr">
+            <td class="td">...</td>
+            <td class="td">...</td>
+            <td class="td">...</td>
+            <td class="td">Awaiting Approval</td>
+          </tr>
+        </table>
+    </form>
     </div>
+  </div>
 
 {% endblock %}

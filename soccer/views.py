@@ -15,7 +15,8 @@ def profile(request):
     """
     renders profile page
     """
-    return render(request, "soccer/profile.html")
+    bookings = Booking.objects.all()
+    return render(request, "soccer/profile.html", {'bookings': bookings})
 
 def courses(request):
     return render(request, 'soccer/courses.html')
@@ -30,10 +31,3 @@ def bookings(request):
                 form.save()
         context['form'] = form
     return render(request, 'soccer/bookings.html', {'form': BookingForm})
-
-# def new_booking(request, slug):
-  #  model = Booking
-   # template_name = 'soccer/bookings.html'
-    #fields = ['first_name', 'last_name']
- 
-    #booking_form = BookingForm()

@@ -24,7 +24,10 @@
             <th class="th">Course</th><br>
             <th class="th">Venue</th>
             <th class="th">Number of Enrollments</th>
+            <th class="th">Booking Date</th>
+            <th class="th">Booking Time</th>
             <th class="th">Status</th>
+            <th class="th">Action</th>
           </tr>
           <tr class="tr">
             <div class="booking">
@@ -32,7 +35,10 @@
             </div>
             <td class="td">(Tullamore)</td>
             <td class="td">{{ booking.number_of_attendees }}</td>
+            <td class="td">{{ booking.booking_date }}</td>
+            <td class="td">{{ booking.booking_time }}</td>
             <td class="td">{{ booking.booking_status }}</td>
+            <td><button name="save">Save</button> <button name="edit">Edit</button> <button name="delete">Delete</button></td>
           </tr>
         </table>
         {% endif %}

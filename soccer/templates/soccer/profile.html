@@ -15,10 +15,9 @@
 
 <div class="container">
     <div><h2>Bookings</h2>
-      <form method="post" action="{% url 'bookings' %}" enctype="multipart/form-data">
         <div class="bookings">
           {% for booking in bookings %}
-          {% if user.id == booking.id %}
+          {% if user == booking.user %}
         <table class="table">
           <tr class="tr">
             <th class="th">Course</th><br>
@@ -38,13 +37,12 @@
             <td class="td">{{ booking.booking_date }}</td>
             <td class="td">{{ booking.booking_time }}</td>
             <td class="td">{{ booking.booking_status }}</td>
-            <td><button name="save">Save</button> <button name="edit">Edit</button> <button name="delete">Delete</button></td>
+            <td><button formnovalidate name="edit" value="{{ booking.id }}">Edit</button> <button formnovalidate name="delete" value="{{ booking.id }}">Delete</button> <button name="save">New Booking</button></td>
           </tr>
         </table>
         {% endif %}
         {% endfor %}
       </div>
-    </form>
     </div>
   </div>
 

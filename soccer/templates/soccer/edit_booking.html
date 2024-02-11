@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <h1 class="text-center">Edit Booking</h1>
+
+    <p class="text-center cancel-booking-changes">Please use the below form to edit your reservation or to go back click <a href="{% url 'profile' %}">here</a></p>
+    <form method="POST" class="edit-booking-form">
+        {% crispy form %}
+    </form>
+{% else %}
+    <h3 class="text-center">Please login or sign up to an account to be able to make a booking</h3>
+{% endif %}
+
+{%endblock%}

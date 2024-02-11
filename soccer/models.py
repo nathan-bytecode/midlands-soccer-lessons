@@ -56,9 +56,13 @@ class Booking(models.Model):
         ('course3', "COURSE3 - Girls Aged 9-14 (40euros per girl)"),
     ]
 
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        related_name="soccer"
+    )
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    course_selection = models.CharField( choices=course_choice)
+    course_selection = models.CharField(max_length=100, choices=course_choice)
     email = models.EmailField()
     contact_phone = models.CharField(max_length=15, null=False, blank=False)
     booking_date = models.DateField(null=False, blank=False)

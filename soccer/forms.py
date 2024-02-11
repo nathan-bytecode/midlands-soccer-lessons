@@ -19,3 +19,18 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ['first_name', 'last_name', 'course_selection', 'email', 'contact_phone',
                   'booking_date', 'booking_time', 'number_of_attendees']
+
+        widgets = {
+        'booking_date': forms.DateInput(
+            format=('%Y-%m-%d'),
+            attrs={'class': 'form-control', 
+                'placeholder': 'Select a date',
+                'type': 'date'
+                }),
+            'booking_time': forms.TimeInput(
+            format=('%H:%M'),
+            attrs={'class': 'form-control', 
+                'placeholder': 'Select a time',
+                'type': 'time'
+                }),
+        }

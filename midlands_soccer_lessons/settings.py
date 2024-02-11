@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-84^zdzxw764up2^t&4g8*#l(13!-c6kvl49*=lo5(xg&yjb!4%
 DEBUG = True
 
 # Add to allow access to local server and heroku.
-ALLOWED_HOSTS = [ '8000-nathanbytec-midlandssoc-zjji9p2macp.ws-eu107.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = [ '8000-nathanbytec-midlandssoc-zjji9p2macp.ws-eu108.gitpod.io','.herokuapp.com']
 
 
 # Application definition
@@ -91,27 +91,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'midlands_soccer_lessons.wsgi.application'
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 # Code comment out as default sqllite is no longer needed.
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }       
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+   }
+}       
 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.8000-nathanbytec-midlandssoc-zjji9p2macp.ws-eu107.gitpod.io",
+    "https://8000-nathanbytec-midlandssoc-zjji9p2macp.ws-eu108.gitpod.io",
     "https://*.herokuapp.com"
 ]
 

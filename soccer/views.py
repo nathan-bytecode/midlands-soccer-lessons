@@ -35,27 +35,6 @@ def profile(request):
     context['form'] = form
     return render(request, "soccer/profile.html", {'bookings': bookings})
 
-def editBooking(request, id):
-    bookings_check_set = Bookingn.objects.all()
-    bookings_check = bookings_check_set.get(id=id)
-    title = bookings_check.title
-    check_id = bookings_check.id
-
-    if request.user == bookings_check.checked_by or request.user.is_superuser:
-        if request.method == 'POST':
-            form = BookingEditForm(request.POST)
-            if form.is_valid():
-                form.instance.id = check_id
-                form.instance.edited_by = (
-                    f'{User.objects.get(username=request.user)}')
-                form.instance.edit_date = datetime.now()
-                form.save()
-                messages.success(
-                    request,
-                    f"{bookings_check.title} check has been edited."
-                    )
-                return HttpResponseRedirect(reverse('bookings-checks'))    
- 
 def courses(request):
     return render(request, 'soccer/courses.html')
 

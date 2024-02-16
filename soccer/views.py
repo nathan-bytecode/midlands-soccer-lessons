@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from .models import Account, Booking
 from soccer.forms import BookingForm
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 
 # Create your views here.
@@ -34,6 +35,24 @@ def profile(request):
         form = BookingForm(instance=booking) 
     context['form'] = form
     return render(request, "soccer/profile.html", {'bookings': bookings})
+
+
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    form = BookingForm(instance=booking)
+    if request.POST:
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request,
+                             'Your reservation request has been updated')
+        return redirect('profile')
+    booking = BookingForm(instance=booking)
+    context = {
+        'form': form
+    }
+    return render(request, 'soccer/edit_booking.html', context)
+
 
 def courses(request):
     return render(request, 'soccer/courses.html')

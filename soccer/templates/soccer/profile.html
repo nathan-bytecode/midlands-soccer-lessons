@@ -38,8 +38,8 @@
             <td class="td">{{ booking.booking_time }}</td>
             <td class="td">{{ booking.booking_status }}</td>
             <td><button formnovalidate name="edit" value="{{ booking.id }}"><a  href="{% url 'edit_booking' booking.id %}">Edit</a></button> 
-              <button formnovalidate name="delete" value="{{ booking.id }}" type="submit" onclick="return confirm('Are you sure?');"><a>Cancel</a></button> 
-              <button name="save">New Booking</button></td>
+              <button formnovalidate name="delete" value="{{  booking.id }}" type="submit" onclick="return confirm('Are you sure you want to CANCEL your booking?');"><a href="{% url 'delete_booking' booking.id %}">Cancel</a></button> 
+              <button id="myBtn" name="save" value="{{  booking.id }}"><a href="{% url 'bookings' %}">New Booking</a></button></td>
           </tr>
         </table>
         {% endif %}

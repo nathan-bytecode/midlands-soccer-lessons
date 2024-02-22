@@ -44,9 +44,8 @@ def edit_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            messages.add_message(
-                request, messages.success,
-                'Your booking request has been updated.')
+            messages.success(request,
+                             'Your booking request has been updated.')
         return redirect('profile')
     booking = BookingForm(instance=booking)
     context = {

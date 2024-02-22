@@ -17,7 +17,7 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['first_name', 'last_name', 'course_selection', 'email', 'contact_phone',
+        fields = ['first_name', 'last_name', 'course_selection', 'venue_selection', 'email', 'contact_phone',
                   'booking_date', 'booking_time', 'number_of_attendees']
 
         widgets = {

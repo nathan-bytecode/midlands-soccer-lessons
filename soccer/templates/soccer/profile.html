@@ -6,10 +6,10 @@
 
 {% block content %}
 
-<h1>Welcome to your profile page, {{ user.username }}</h1>
+<h1>Welcome to your profile page, {{ user.username }}</h1> <!-- This tag enables the user's name to be displayed -->
 
 <div>
-  <p>Email: {{ user.email }}</p>
+  <p>Email: {{ user.email }}</p> <!-- Displays the user's email they entered upon registering an account -->
 </div>
 <br>
 <br>
@@ -17,7 +17,7 @@
     <div><h2>Bookings are displayed here:</h2>
         <div class="bookings">
           {% for booking in bookings %}
-          {% if user == booking.user %}
+          {% if user == booking.user %} <!-- If loop to validate the user's id to display only that user's bookings -->
         <table class="table">
           <tr class="tr">
             <th class="th">Course</th><br>
@@ -29,7 +29,7 @@
           </tr>
           <tr class="tr">
             <div class="booking">
-              <td class="td">{{ booking.course_selection }}</td>
+              <td class="td">{{ booking.course_selection }}</td> <!-- Calls upon the model -->
               <td class="td">{{ booking.venue_selection }}</td>
             </div>
             <td class="td">{{ booking.number_of_attendees }}</td>

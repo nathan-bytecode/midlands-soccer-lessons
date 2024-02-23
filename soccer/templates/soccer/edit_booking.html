@@ -6,10 +6,10 @@
 
 {% block content %}
 
-{% if user.is_authenticated %}
+{% if user.is_authenticated %} <!-- If loop to check if user is valid to edit booking -->
     <h1 class="text-center">Edit Booking</h1>
 
-    <p class="text-center cancel-booking-changes">Please use the below form to edit your reservation or to go back click <a href="{% url 'profile' %}">here</a></p>
+    <p class="text-center cancel-booking-changes">Please use the below form to edit your booking or to go back click <a href="{% url 'profile' %}">here</a></p>
     <form method="POST" class="edit-booking-form">
         {% crispy form %}
     </form>

@@ -43,8 +43,8 @@ def edit_booking(request, booking_id):
     if request.POST:
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
-            form.save()
-            messages.success(request,
+            form.save() # save method called upon to update booking info #
+            messages.success(request, # upon update, message displays to nofify user #
                              'Your booking request has been updated.')
         return redirect('profile')
     booking = BookingForm(instance=booking)
@@ -55,7 +55,7 @@ def edit_booking(request, booking_id):
 
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
-    booking.delete()
+    booking.delete() # delete method called upon to cancel user's booking #
     messages.warning(request,
                      'Your booking has been cancelled.')
     return redirect('profile')

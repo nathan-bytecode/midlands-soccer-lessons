@@ -1,17 +1,17 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!-- Tag to extend base.html, this allows other htmls to build on this foundation -->
 
 {% url 'bookings' as bookings_url %}
 
-{% load crispy_forms_tags %}
+{% load crispy_forms_tags %} <!-- Django's great crispy form loaded -->
 
 {% block content %}
 
 <main class="container">
-        <div class="row" style="overflow-x:auto;">
+        <div class="row" style="overflow-x:auto;"> <!-- Horizontal scroll bar placed for responsive design -->
             <div class="col-sm-6">
                 <form method="post" action="{% url 'bookings' %}">
                 {{ form|crispy }}
-                {% csrf_token %}
+                {% csrf_token %} <!-- Without a csrf_token cripsy form will not function, this is due to secruity reasons -->
                     <button name="submit" id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
             </div>

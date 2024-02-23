@@ -4,10 +4,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 
-STATUS = ((0, "Not Live"), (1, "Live"))
-BOOKING_STATUS = ((0, "Awaiting Confirmation"), (1, "Confirm Booking"),
-                  (2, "Booking Declined"))
-
 class Account(models.Model):
     first_name = models.CharField(max_length=200, unique=True, default='SOME STRING')
     last_name = models.CharField(max_length=200, unique=True, default='SOME STRING')
@@ -75,7 +71,6 @@ class Booking(models.Model):
     booking_date = models.DateField(null=False, blank=False)
     booking_time = models.CharField(null=False, blank=False, max_length=5)
     number_of_attendees = models.IntegerField(default=1, blank=False)
-    booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
 
     def __str__(self):
         return self.first_name

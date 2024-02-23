@@ -10,6 +10,23 @@ This project is aimed to target ages 7-21 boys and 9-21 girls who are interested
 
 ### UX
 
+#### Pre-project Planning
+![Database structure](/static/images/readme/UX%20-%20Preproject%20Planning.png)
+
+* When I decided on my initial idea of Midlands Soccer Lessons I knew I needed to understand what  type of data I would need to store and the relationships between them.
+* I created the above diagram on lucidchart.
+* As of now when the project is finished the only field not implemented is the confirmation status in the Booking model as I ran out of time.
+
+### UX Design
+#### Overview
+As Midlands Soccer Lessons is a website that targets parents who have kids from the ages 7 for boys and 9 for girls upwards, I wanted to design the website with a bright welcoming feel. For each course available a photo was carefully selected to attract interest. 
+The main goal of the website is to allow users to view some photos of the venue, see what the courses have to offer, choose from the different options and then the user can create an account and use it to make bookings for soccer lessons.
+
+#### Wireframes
+
+
+
+
 ### Agile Development
 
 ### Features

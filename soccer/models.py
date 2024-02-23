@@ -70,7 +70,7 @@ class Booking(models.Model):
     email = models.EmailField()
     contact_phone = models.CharField(max_length=15, null=False, blank=False)
     booking_date = models.DateField(null=False, blank=False)
-    booking_time = models.CharField(null=False, blank=False, max_length=5)
+    booking_time = models.TimeField(null=False, blank=False, max_length=5)
     number_of_attendees = models.IntegerField(default=1, blank=False)
 
     def __str__(self):

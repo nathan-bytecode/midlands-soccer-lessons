@@ -35,6 +35,22 @@ I've not included the following: user profile image, user's display of a phone n
 
 
 ### Agile Development
+### Agile Overview
+This project was started alongside a GitHub Projects Page to track and manage the expected workload ahead. The aim was to set out my expected workload, list the epics and then break them down into user stories or bite sized tasks to work towards and ultimately finish the site in good time.
+
+To see Kanban please [click here](https://github.com/users/nathan-bytecode/projects/9).
+
+### User Stories
+The user stories tool served as a checklist throughout this project and enabled me to keep on the right track. User stories #8 and #9 are still in the To Do list as I ran out of time to implement.
+
+1. [USER STORY: Deploy Website#1](https://github.com/users/nathan-bytecode/projects/9/views/1?pane=issue&itemId=49518992)
+2. [USER STORY: Admin Panel#2](https://github.com/users/nathan-bytecode/projects/9?pane=issue&itemId=49518994)
+3. [USER STORY: Create an account (CRUD)#3](https://github.com/users/nathan-bytecode/projects/9/views/1?pane=issue&itemId=49518995)
+4. [USER STORY: Base Template#4](https://github.com/users/nathan-bytecode/projects/9/views/1?pane=issue&itemId=49518996)
+5. [USER STORY: Make a Booking#5](https://github.com/users/nathan-bytecode/projects/9/views/1?pane=issue&itemId=49518997)
+6. [USER STORY: Courses#7](https://github.com/users/nathan-bytecode/projects/9/views/1?pane=issue&itemId=49518998)
+7. [USER STORY: Edit Profile (CRUD)#8](https://github.com/users/nathan-bytecode/projects/9?pane=issue&itemId=49518999)
+8. [USER STORY: Delete Profile (CRUD)#9](https://github.com/users/nathan-bytecode/projects/9?pane=issue&itemId=49519001)
 
 ### Features
 

@@ -53,8 +53,40 @@ The user stories tool served as a checklist throughout this project and enabled 
 8. [USER STORY: Delete Profile (CRUD)#9](https://github.com/users/nathan-bytecode/projects/9?pane=issue&itemId=49519001)
 
 ### Features
+#### User based features
+* Users can create an account (Create)
+* Users can log into their account
+* Users can log out of their account
+* Users can make a booking through the booking form (Create)
+* Users can access their profile page and view their bookings (Read)
+* Users can edit their booking (Update)
+* Users can delete bookings from their profile page (Delete)
+
+#### Website features
+##### Home page
+* Book today link to give user quick access to booking form
+* Website's logo is link to reload home page
+* Dynamic head bar informs user if they are logged in
+* If they user chooses to learn more about the available courses they can click the link to take them to the courses page
+
+##### Bookings page
+* Gives user access to a booking form
+* Prevents booking form access if the user is not registered or logged in
+
+##### Courses page
+* Displays more information about available courses for user to select from
+
+##### Profile page
+* If the user is not logged in they are advised to in order to make a booking
+* Upon logged in, the user can use the profile page to view, edit, delete their bookings
 
 ### Features Left to Implement
+* Delete account 
+* Update account details
+* Booking confirmation status
+* Notify user of booking decline or acceptance
+* Narrow the time selection down to more reasonable choice when making a booking
+* Add a calendar widget that displays dates already full and what dates are available
 
 ### Technologies Used
 

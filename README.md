@@ -23,8 +23,15 @@ As Midlands Soccer Lessons is a website that targets parents who have kids from 
 The main goal of the website is to allow users to view some photos of the venue, see what the courses have to offer, choose from the different options and then the user can create an account and use it to make bookings for soccer lessons.
 
 #### Wireframes
+As displayed below, this wireframe was a great guide for me to design the home landing page.
+
+![Home page landing](/static/images/readme/Wireframe%20-%20home%20landing.png)
 
 
+Here its easy to see how I drew inspiration from this wireframe but the project's profile page itself is not exactly as planned.
+I've not included the following: user profile image, user's display of a phone number, booking status and the opttion to delete user account as I ran out of time.
+
+![Profile page](/static/images/readme/Profile%20page%20wireframe.png)
 
 
 ### Agile Development

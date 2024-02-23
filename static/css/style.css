@@ -32,11 +32,6 @@ body {
     padding-bottom: 40px;
 }
 
-/* Due to a text decoration underline bug with the Social Media heading, I decided to underline the Contact heading for better UX */
-.contact-title {
-    text-decoration-line: underline;
-}
-
 /* ---------- Index.html page ---------- */
 
 body, html {

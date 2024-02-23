@@ -75,7 +75,7 @@ def bookings(request):
     form = BookingForm()
     if request.method == 'POST':
         if 'submit' in request.POST:
-            form = BookingForm(request.POST)
+            form = BookingForm(request.POST, use_required_attribute=False)
             if form.is_valid():
                 form.instance.user = (
                 User.objects.get(username = request.user))

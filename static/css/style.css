@@ -66,6 +66,16 @@ body, html {
   color: white;
 }
 
+/* Due to html checkup error in placing anchor element within a button element, I decided to style the anchor */
+#btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #dddddd;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
 /* ---------- Venues and Courses section ---------- */
 
 .card-title {
